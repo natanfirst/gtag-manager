@@ -12,7 +12,7 @@ export default function GoogleTagProvider({
   const pathname = usePathname();
 
   useEffect(() => {
-    sendGTMEvent("page_view", pathname);
+    sendGTMEvent({ event: "page_view", value: pathname });
   }, [pathname]);
 
   return <>{children}</>;
